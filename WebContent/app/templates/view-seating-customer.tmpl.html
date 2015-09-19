@@ -1,0 +1,17 @@
+
+<div class="row">
+	<div class="col-sm-4" data-ng-repeat="table in custVm.allTables">	
+			<div class="thumbnail">
+			<img data-ng src = "images/table{{table.t_id}}.jpg">
+				<div class="caption">
+					<p>
+						<strong>Table Number:</strong> {{table.t_id}}
+					</p>
+					<p>
+						<strong>Status:</strong> {{table.t_status}}
+					</p>
+					<p><button data-ng-click="custVm.reserveTable(table.t_id)" class="btn btn-primary">Reserve</button> <a href="#" class="btn btn-default" role="button">Cancel</a></p>
+				</div>
+			</div>
+	</div>
+</div>

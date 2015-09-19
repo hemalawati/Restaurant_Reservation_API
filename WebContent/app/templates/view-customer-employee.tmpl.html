@@ -1,0 +1,24 @@
+
+<div class="row">
+	<div class="col-sm-4" data-ng-repeat="customer in empVm.allCustomers">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h4 class="panel-title">{{customer.c_name}}</h4>
+			</div>
+			<div class="panel-body">
+				<p>
+					<strong>Id:</strong> {{customer.c_id}}
+				</p>
+				<p>
+					<strong>Phone:</strong> {{customer.c_phone}}
+				</p>
+				<p>
+					<strong>Email:</strong> {{customer.c_email}}
+				</p>
+				<p>
+					<strong>Address:</strong> {{customer.c_address}}
+				</p>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,33 @@
+<content>
+	<table class="table table-striped table-bordered">
+		<thead>
+			<tr>
+				<th></th>
+				<th></th>
+				<th>Id</th>
+				<th>Name</th>
+				<th>Number of party</th>
+				<th>Status</th>
+				<th>Reservation Date</th>
+				<th>Today Date</th>
+				<th>Confirmation</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr data-ng-repeat="reservation in allReservations">
+				<td><i data-ng-click="editReservation($index)"
+					class="glyphicon glyphicon-pencil"></i></td>
+				<td><i data-ng-click="open(reservation.r_id)"
+					class="glyphicon glyphicon-remove"></i></td>
+				<td>{{reservation.r_id}}</td>
+				<td>{{reservation.c_name}}</td>
+				<td>{{reservation.r_size}}</td>
+				<td>{{reservation.r_status}}</td>
+				<td>{{reservation.r_reservation_date}}</td>
+				<td>{{reservation.r_today_date}}</td>
+				<td>{{reservation.r_confirmation}}</td>
+			</tr>
+		</tbody>
+	</table>
+	</content>

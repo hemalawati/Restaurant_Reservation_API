@@ -1,0 +1,89 @@
+<form name="reservationForm" novalidate
+	data-ng-submit="custVm.addReservation()">
+
+	<!-- customer name -->
+	<div class="form-group">
+		<label for="name">Name</label> <input type="text" class="form-control"
+			required name="name" id="name" placeholder="Your Name"
+			data-ng-model="custVm.reservation.c_name">
+		<div data-ng-messages="reservationForm.name.$error" class="errors"
+			data-ng-if="reservationForm.name.$dirty">
+			<p data-ng-message="required">Name is required</p>
+		</div>
+	</div>
+
+	<!-- seating table id -->
+	<div class="form-group">
+		<label for="t_id">Table number</label> <input type="number"
+			class="form-control" required name="t_id" id="t_id"
+			placeholder="Table number" data-ng-model="custVm.reservation.t_id"
+			disabled>
+		<div data-ng-messages="reservationForm.t_id.$error" class="errors"
+			data-ng-if="reservationForm.t_id.$dirty">
+			<p data-ng-message="required">Table number is required</p>
+		</div>
+	</div>
+
+	<!-- party size -->
+	<div class="form-group">
+		<label for="r_size">Party size</label> <input type="number"
+			class="form-control" required name="r_size" id="r_size"
+			placeholder="Party size" data-ng-model="custVm.reservation.r_size">
+		<div data-ng-messages="reservationForm.r_size.$error" class="errors"
+			data-ng-if="reservationForm.r_size.$dirty">
+			<p data-ng-message="required">Enter party size</p>
+		</div>
+	</div>
+
+	<!-- reservation status -->
+	<div class="form-group">
+		<label for="r_status">Status</label> <input type="text"
+			class="form-control" id="r_status" required placeholder="Status"
+			data-ng-model="custVm.reservation.r_status">
+		<div data-ng-messages="reservationForm.r_status.$error" class="errors"
+			data-ng-if="reservationForm.r_status.$dirty">
+			<p data-ng-message="required">Enter reservation status</p>
+		</div>
+	</div>
+
+	<!-- reservation date -->
+	<div class="form-group">
+		<label for="r_reserve_date">Reservation Date</label> <input
+			type="text" class="form-control" required name="r_reservation_date"
+			id="r_reserve_date" placeholder="yyyy-MM-dd"
+			data-ng-model="custVm.reservation.r_reservation_date">
+		<div data-ng-messages="reservationForm.r_reservation_date.$error"
+			class="errors" data-ng-if="reservationForm.r_reservation_date.$dirty">
+			<p data-ng-message="required">Enter date for reservation</p>
+		</div>
+	</div>
+
+	<!-- today date -->
+	<div class="form-group">
+		<label for="r_today_date">Today Date</label> <input type="text"
+			class="form-control" name="r_today_date" id="r_today_date"
+			placeholder="yyyy-MM-dd"
+			data-ng-model="custVm.reservation.r_today_date">
+		<div data-ng-messages="reservationForm.r_today_date.$error"
+			class="errors" data-ng-if="reservationForm.r_today_date.$dirty">
+			<p data-ng-message="required">Enter today date</p>
+		</div>
+	</div>
+
+	<!-- reservation confirmation -->
+	<div class="form-group">
+		<label for="r_confirmation">Confirmation</label> <input type="text"
+			class="form-control" required name="r_confirmation"
+			id="r_confirmation" placeholder="confirmation"
+			data-ng-model="custVm.reservation.r_confirmation">
+		<div data-ng-messages="reservationForm.r_confirmation.$error"
+			class="errors" data-ng-if="reservationForm.r_confirmation.$dirty">
+			<p data-ng-message="required">Confirmation required</p>
+		</div>
+	</div>
+
+	<button type="submit" class="btn btn-primary"
+		data-ng-disabled="reservationForm.$invalid">Add reservation</button>
+</form>
+
+{{custVm.message}}

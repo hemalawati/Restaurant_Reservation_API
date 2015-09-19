@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html data-ng-app="hemaApp">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://bootswatch.com/cerulean/bootstrap.css">
+<link rel="stylesheet" href="css/styleSheet.css">
+<title>Customer</title>
+</head>
+<body data-ng-controller="CustTableController as custVm">
+
+	<div data-ng-include="'app/templates/header.tmpl.html'"></div>
+
+	<section>
+		<div data-ng-include="'app/templates/cust-menu-nav.tmpl.html'"
+			class="col-md-3"></div>
+
+		<div class="col-md-9">
+			<div data-ng-view></div>
+		</div>
+	</section>
+
+	<div data-ng-include="'app/templates/footer.tmpl.html'"></div>
+
+	<!-- SCRIPTS SECTION -->
+	<script src="https://code.angularjs.org/1.4.5/angular.js"></script>
+	<script src="https://code.angularjs.org/1.4.6/angular-route.js"></script>
+	<script src="https://code.angularjs.org/1.4.6/angular-messages.js"></script>
+	<script
+		src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.13.4.js"></script>
+	<script src="app/config/customer-route.config.js"></script>
+	<script src="app/services/customer.service.js"></script>
+	<script src="app/services/data.service.js"></script>
+	<script src="app/controllers/cust-view-seating.controller.js"></script>
+	<script src="app/controllers/cust-create-reservation.controller.js"></script>
+	<script src="app/controllers/cust-view-reservation.controller.js"></script>
+
+</body>
+</html>
